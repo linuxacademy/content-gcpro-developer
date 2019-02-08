@@ -77,7 +77,7 @@ def add():
             data['imageUrl'] = image_url
         # [END image_url2]
 
-        album = get_model().create(data)
+        artwork = get_model().create(data)
 
         return redirect(url_for('.view', id=artwork['id']))
 
