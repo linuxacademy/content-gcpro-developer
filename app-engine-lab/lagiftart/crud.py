@@ -79,9 +79,9 @@ def add():
 
         album = get_model().create(data)
 
-        return redirect(url_for('.view', id=album['id']))
+        return redirect(url_for('.view', id=artwork['id']))
 
-    return render_template("form.html", action="Add", album={})
+    return render_template("form.html", action="Add", artwork={})
 
 
 @crud.route('/<id>/edit', methods=['GET', 'POST'])
