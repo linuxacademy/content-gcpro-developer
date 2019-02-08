@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import musicgallery
+import lagiftart
 import config
 
 
-app = musicgallery.create_app(config)
+app = lagiftart.create_app(config)
 
 
 # This is only used when running locally. When running live, gunicorn runs
