@@ -10,13 +10,13 @@
 #la-logo {
 	padding-top: 25px
 }
-#musicgallery-logo {
-	background-image: url(/static/images/LA-MusicGallery-logo.png);
+#lagiftart-logo {
+	background-image: url(/static/images/LaGiftArt.png);
 	width: 330px;
 	height: 80px;
 	background-repeat: no-repeat;
 }
-#addAlbum {
+#addArtwork {
 	text-align: right;
 	padding-top: 15px;
 }
