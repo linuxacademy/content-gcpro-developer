@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from musicgallery import get_model, storage
+from lagiftart import get_model, storage
 from flask import Blueprint, current_app, redirect, render_template, request, \
     url_for
 
@@ -48,18 +48,18 @@ def list():
     if token:
         token = token.encode('utf-8')
 
-    albums, next_page_token = get_model().list(cursor=token)
+    artworks, next_page_token = get_model().list(cursor=token)
 
     return render_template(
         "list.html",
-        albums=albums,
+        artworks=artworks,
         next_page_token=next_page_token)
 
 
 @crud.route('/<id>')
 def view(id):
-    album = get_model().read(id)
-    return render_template("view.html", album=album)
+    artwork = get_model().read(id)
+    return render_template("view.html", artwork=artwork)
 
 
 @crud.route('/add', methods=['GET', 'POST'])
@@ -86,7 +86,7 @@ def add():
 
 @crud.route('/<id>/edit', methods=['GET', 'POST'])
 def edit(id):
-    album = get_model().read(id)
+    artwork = get_model().read(id)
 
     if request.method == 'POST':
         data = request.form.to_dict(flat=True)
@@ -96,11 +96,11 @@ def edit(id):
         if image_url:
             data['imageUrl'] = image_url
 
-        album = get_model().update(data, id)
+        artwork = get_model().update(data, id)
 
-        return redirect(url_for('.view', id=album['id']))
+        return redirect(url_for('.view', id=artwork['id']))
 
-    return render_template("form.html", action="Edit", album=album)
+    return render_template("form.html", action="Edit", artwork=artwork)
 
 
 @crud.route('/<id>/delete')
