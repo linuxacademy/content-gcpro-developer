@@ -49,7 +49,7 @@ def from_datastore(entity):
 def list(limit=24, cursor=None):
     ds = get_client()
 
-    query = ds.query(kind='Album', order=['title'])
+    query = ds.query(kind='Artwork', order=['title'])
     query_iterator = query.fetch(limit=limit, start_cursor=cursor)
     page = next(query_iterator.pages)
 
