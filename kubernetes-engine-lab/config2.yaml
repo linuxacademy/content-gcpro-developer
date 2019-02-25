@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx-1
+  name: nginx-1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx-1
+  strategy:
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 1
+    type: RollingUpdate  
+  template:
+    metadata:
+      creationTimestamp: 
+      labels:
+        app: nginx-1
+    spec:
+      containers:
+      - image: gcr.io/la-containers-001/la-container-image:v1
+        name: la-container-image
+
