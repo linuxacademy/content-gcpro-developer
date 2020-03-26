@@ -19,7 +19,7 @@ import datetime
 from flask import current_app
 from google.cloud import storage
 import six
-from werkzeug import secure_filename
+from werkzeug.utils import secure_filename
 from werkzeug.exceptions import BadRequest
 
 
