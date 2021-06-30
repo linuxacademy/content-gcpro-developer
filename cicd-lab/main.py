@@ -9,4 +9,4 @@ def greetings_http(request):
         name = request_args['name']
     else:
         name = 'my friend'
-    return '<h1 style="margin:20px auto;width:800px;">Greetings from Linux Academy, {}!</h1><h2>Via Source Control Repo</h2>'.format(escape(name))
+    return '<h1 style="margin:20px auto;width:800px;">Greetings from the Cloud, {}!</h1><h2 style="margin:20px auto;width:800px;">Via Source Control Repo and Cloud Build</h2>'.format(escape(name))
