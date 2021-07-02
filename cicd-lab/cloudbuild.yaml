@@ -1,7 +1,10 @@
 steps:
-- name: 'gcr.io/cloud-builders/yarn'
-  args: ['install']
-  dir: 'functions/autodeploy'
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'repo-function-1', '--trigger-http', '--runtime', 'python39', '--entry-point', 'greetings_http']
-  dir: 'functions/autodeploy'
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - repo-function-1
+  - --region=us-central1
+  - --source=.
+  - --trigger-http
