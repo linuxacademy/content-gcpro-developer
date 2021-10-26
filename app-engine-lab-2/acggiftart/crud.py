@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from lagiftart import get_model, storage
+from acggiftart import get_model, storage
 from flask import Blueprint, current_app, redirect, render_template, request, \
     url_for
 
