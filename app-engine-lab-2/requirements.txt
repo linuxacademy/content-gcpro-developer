@@ -7,4 +7,4 @@ Flask-SQLAlchemy==2.5.1
 PyMySQL==1.0.2
 Flask-PyMongo==2.3.0
 PyMongo==3.12.1
-six==1.16.1
+six==1.16.0
