@@ -39,7 +39,7 @@ PROJECT_ID = '[YOUR-PROJECT-ID]'
 # instance.
 CLOUDSQL_USER = 'root'
 CLOUDSQL_PASSWORD = 'your-cloudsql-password'
-CLOUDSQL_DATABASE = 'lagiftart'
+CLOUDSQL_DATABASE = 'acggiftart'
 # Set this value to the Cloud SQL connection name, e.g.
 #   "project:region:cloudsql-instance".
 # You must also update the value in app.yaml.
