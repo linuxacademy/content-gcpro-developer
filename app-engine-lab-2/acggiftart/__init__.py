@@ -36,7 +36,7 @@ def create_app(config, debug=False, testing=False, config_overrides=None):
         model = get_model()
         model.init_app(app)
 
-    # Register the LaGiftArt CRUD blueprint.
+    # Register the ACGGiftArt CRUD blueprint.
     from .crud import crud
     app.register_blueprint(crud, url_prefix='/artworks')
 
